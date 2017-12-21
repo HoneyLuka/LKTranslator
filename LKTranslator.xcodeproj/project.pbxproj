@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10328A61FEA7FDE0010D349 /* LKTranslatorCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A10328A51FEA7FDE0010D349 /* LKTranslatorCore.m */; };
+		A10328A91FEA80780010D349 /* LKHotKeyObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A10328A81FEA80780010D349 /* LKHotKeyObserver.m */; };
+		A10328C71FEBB53C0010D349 /* LKUIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A10328C61FEBB53C0010D349 /* LKUIHandler.m */; };
+		A1A6481C1FE7C0BE00473FFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A6481B1FE7C0BE00473FFC /* AppDelegate.m */; };
+		A1A648211FE7C0BE00473FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A648201FE7C0BE00473FFC /* Assets.xcassets */; };
+		A1A648271FE7C0BE00473FFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A648261FE7C0BE00473FFC /* main.m */; };
+		A1A648321FE7C0BE00473FFC /* LKTranslatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A648311FE7C0BE00473FFC /* LKTranslatorTests.m */; };
+		A1A6483D1FE7C0BE00473FFC /* LKTranslatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A6483C1FE7C0BE00473FFC /* LKTranslatorUITests.m */; };
+		A1BBCEB81FE7C5AF00434E2F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BBCEB71FE7C5AF00434E2F /* MainMenu.xib */; };
+		A1BBCEBB1FE7D3E200434E2F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BBCEBA1FE7D3E200434E2F /* Carbon.framework */; };
+		A1BBCEBF1FE8D02C00434E2F /* LKPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBCEBD1FE8D02C00434E2F /* LKPopoverViewController.m */; };
+		A1BBCEC01FE8D02C00434E2F /* LKPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BBCEBE1FE8D02C00434E2F /* LKPopoverViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1A6482E1FE7C0BE00473FFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1A6480F1FE7C0BE00473FFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1A648161FE7C0BE00473FFC;
+			remoteInfo = LKTranslator;
+		};
+		A1A648391FE7C0BE00473FFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1A6480F1FE7C0BE00473FFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1A648161FE7C0BE00473FFC;
+			remoteInfo = LKTranslator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A10328A41FEA7FDE0010D349 /* LKTranslatorCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTranslatorCore.h; sourceTree = "<group>"; };
+		A10328A51FEA7FDE0010D349 /* LKTranslatorCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKTranslatorCore.m; sourceTree = "<group>"; };
+		A10328A71FEA80780010D349 /* LKHotKeyObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKHotKeyObserver.h; sourceTree = "<group>"; };
+		A10328A81FEA80780010D349 /* LKHotKeyObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKHotKeyObserver.m; sourceTree = "<group>"; };
+		A10328C51FEBB53C0010D349 /* LKUIHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKUIHandler.h; sourceTree = "<group>"; };
+		A10328C61FEBB53C0010D349 /* LKUIHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKUIHandler.m; sourceTree = "<group>"; };
+		A1A648171FE7C0BE00473FFC /* LKTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A6481A1FE7C0BE00473FFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1A6481B1FE7C0BE00473FFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1A648201FE7C0BE00473FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1A648251FE7C0BE00473FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A648261FE7C0BE00473FFC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1A648281FE7C0BE00473FFC /* LKTranslator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LKTranslator.entitlements; sourceTree = "<group>"; };
+		A1A6482D1FE7C0BE00473FFC /* LKTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A648311FE7C0BE00473FFC /* LKTranslatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKTranslatorTests.m; sourceTree = "<group>"; };
+		A1A648331FE7C0BE00473FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A648381FE7C0BE00473FFC /* LKTranslatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKTranslatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A6483C1FE7C0BE00473FFC /* LKTranslatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKTranslatorUITests.m; sourceTree = "<group>"; };
+		A1A6483E1FE7C0BE00473FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BBCEB71FE7C5AF00434E2F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		A1BBCEBA1FE7D3E200434E2F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		A1BBCEBC1FE8D02C00434E2F /* LKPopoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKPopoverViewController.h; sourceTree = "<group>"; };
+		A1BBCEBD1FE8D02C00434E2F /* LKPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKPopoverViewController.m; sourceTree = "<group>"; };
+		A1BBCEBE1FE8D02C00434E2F /* LKPopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LKPopoverViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1A648141FE7C0BE00473FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BBCEBB1FE7D3E200434E2F /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A6482A1FE7C0BE00473FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A648351FE7C0BE00473FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1A6480E1FE7C0BE00473FFC = {
+			isa = PBXGroup;
+			children = (
+				A1A648191FE7C0BE00473FFC /* LKTranslator */,
+				A1A648301FE7C0BE00473FFC /* LKTranslatorTests */,
+				A1A6483B1FE7C0BE00473FFC /* LKTranslatorUITests */,
+				A1A648181FE7C0BE00473FFC /* Products */,
+				A1BBCEB91FE7D3E200434E2F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A1A648181FE7C0BE00473FFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1A648171FE7C0BE00473FFC /* LKTranslator.app */,
+				A1A6482D1FE7C0BE00473FFC /* LKTranslatorTests.xctest */,
+				A1A648381FE7C0BE00473FFC /* LKTranslatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1A648191FE7C0BE00473FFC /* LKTranslator */ = {
+			isa = PBXGroup;
+			children = (
+				A1A6481A1FE7C0BE00473FFC /* AppDelegate.h */,
+				A1A6481B1FE7C0BE00473FFC /* AppDelegate.m */,
+				A1BBCEB71FE7C5AF00434E2F /* MainMenu.xib */,
+				A1BBCEBC1FE8D02C00434E2F /* LKPopoverViewController.h */,
+				A1BBCEBD1FE8D02C00434E2F /* LKPopoverViewController.m */,
+				A1BBCEBE1FE8D02C00434E2F /* LKPopoverViewController.xib */,
+				A10328A41FEA7FDE0010D349 /* LKTranslatorCore.h */,
+				A10328A51FEA7FDE0010D349 /* LKTranslatorCore.m */,
+				A10328A71FEA80780010D349 /* LKHotKeyObserver.h */,
+				A10328A81FEA80780010D349 /* LKHotKeyObserver.m */,
+				A10328C51FEBB53C0010D349 /* LKUIHandler.h */,
+				A10328C61FEBB53C0010D349 /* LKUIHandler.m */,
+				A1A648201FE7C0BE00473FFC /* Assets.xcassets */,
+				A1A648251FE7C0BE00473FFC /* Info.plist */,
+				A1A648261FE7C0BE00473FFC /* main.m */,
+				A1A648281FE7C0BE00473FFC /* LKTranslator.entitlements */,
+			);
+			path = LKTranslator;
+			sourceTree = "<group>";
+		};
+		A1A648301FE7C0BE00473FFC /* LKTranslatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A648311FE7C0BE00473FFC /* LKTranslatorTests.m */,
+				A1A648331FE7C0BE00473FFC /* Info.plist */,
+			);
+			path = LKTranslatorTests;
+			sourceTree = "<group>";
+		};
+		A1A6483B1FE7C0BE00473FFC /* LKTranslatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A6483C1FE7C0BE00473FFC /* LKTranslatorUITests.m */,
+				A1A6483E1FE7C0BE00473FFC /* Info.plist */,
+			);
+			path = LKTranslatorUITests;
+			sourceTree = "<group>";
+		};
+		A1BBCEB91FE7D3E200434E2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1BBCEBA1FE7D3E200434E2F /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1A648161FE7C0BE00473FFC /* LKTranslator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A648411FE7C0BE00473FFC /* Build configuration list for PBXNativeTarget "LKTranslator" */;
+			buildPhases = (
+				A1A648131FE7C0BE00473FFC /* Sources */,
+				A1A648141FE7C0BE00473FFC /* Frameworks */,
+				A1A648151FE7C0BE00473FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LKTranslator;
+			productName = LKTranslator;
+			productReference = A1A648171FE7C0BE00473FFC /* LKTranslator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1A6482C1FE7C0BE00473FFC /* LKTranslatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A648441FE7C0BE00473FFC /* Build configuration list for PBXNativeTarget "LKTranslatorTests" */;
+			buildPhases = (
+				A1A648291FE7C0BE00473FFC /* Sources */,
+				A1A6482A1FE7C0BE00473FFC /* Frameworks */,
+				A1A6482B1FE7C0BE00473FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1A6482F1FE7C0BE00473FFC /* PBXTargetDependency */,
+			);
+			name = LKTranslatorTests;
+			productName = LKTranslatorTests;
+			productReference = A1A6482D1FE7C0BE00473FFC /* LKTranslatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1A648371FE7C0BE00473FFC /* LKTranslatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A648471FE7C0BE00473FFC /* Build configuration list for PBXNativeTarget "LKTranslatorUITests" */;
+			buildPhases = (
+				A1A648341FE7C0BE00473FFC /* Sources */,
+				A1A648351FE7C0BE00473FFC /* Frameworks */,
+				A1A648361FE7C0BE00473FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1A6483A1FE7C0BE00473FFC /* PBXTargetDependency */,
+			);
+			name = LKTranslatorUITests;
+			productName = LKTranslatorUITests;
+			productReference = A1A648381FE7C0BE00473FFC /* LKTranslatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1A6480F1FE7C0BE00473FFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Luka Li";
+				TargetAttributes = {
+					A1A648161FE7C0BE00473FFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1A6482C1FE7C0BE00473FFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A1A648161FE7C0BE00473FFC;
+					};
+					A1A648371FE7C0BE00473FFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A1A648161FE7C0BE00473FFC;
+					};
+				};
+			};
+			buildConfigurationList = A1A648121FE7C0BE00473FFC /* Build configuration list for PBXProject "LKTranslator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1A6480E1FE7C0BE00473FFC;
+			productRefGroup = A1A648181FE7C0BE00473FFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1A648161FE7C0BE00473FFC /* LKTranslator */,
+				A1A6482C1FE7C0BE00473FFC /* LKTranslatorTests */,
+				A1A648371FE7C0BE00473FFC /* LKTranslatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1A648151FE7C0BE00473FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A648211FE7C0BE00473FFC /* Assets.xcassets in Resources */,
+				A1BBCEB81FE7C5AF00434E2F /* MainMenu.xib in Resources */,
+				A1BBCEC01FE8D02C00434E2F /* LKPopoverViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A6482B1FE7C0BE00473FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A648361FE7C0BE00473FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1A648131FE7C0BE00473FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BBCEBF1FE8D02C00434E2F /* LKPopoverViewController.m in Sources */,
+				A10328A91FEA80780010D349 /* LKHotKeyObserver.m in Sources */,
+				A1A648271FE7C0BE00473FFC /* main.m in Sources */,
+				A10328C71FEBB53C0010D349 /* LKUIHandler.m in Sources */,
+				A1A6481C1FE7C0BE00473FFC /* AppDelegate.m in Sources */,
+				A10328A61FEA7FDE0010D349 /* LKTranslatorCore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A648291FE7C0BE00473FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A648321FE7C0BE00473FFC /* LKTranslatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A648341FE7C0BE00473FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A6483D1FE7C0BE00473FFC /* LKTranslatorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1A6482F1FE7C0BE00473FFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1A648161FE7C0BE00473FFC /* LKTranslator */;
+			targetProxy = A1A6482E1FE7C0BE00473FFC /* PBXContainerItemProxy */;
+		};
+		A1A6483A1FE7C0BE00473FFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1A648161FE7C0BE00473FFC /* LKTranslator */;
+			targetProxy = A1A648391FE7C0BE00473FFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1A6483F1FE7C0BE00473FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A1A648401FE7C0BE00473FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A1A648421FE7C0BE00473FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LKTranslator/LKTranslator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H7DMGLX7HR;
+				INFOPLIST_FILE = LKTranslator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyluka.LKTranslator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1A648431FE7C0BE00473FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LKTranslator/LKTranslator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H7DMGLX7HR;
+				INFOPLIST_FILE = LKTranslator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyluka.LKTranslator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A1A648451FE7C0BE00473FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4Y23644F4;
+				INFOPLIST_FILE = LKTranslatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyluka.LKTranslatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LKTranslator.app/Contents/MacOS/LKTranslator";
+			};
+			name = Debug;
+		};
+		A1A648461FE7C0BE00473FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4Y23644F4;
+				INFOPLIST_FILE = LKTranslatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyluka.LKTranslatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LKTranslator.app/Contents/MacOS/LKTranslator";
+			};
+			name = Release;
+		};
+		A1A648481FE7C0BE00473FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4Y23644F4;
+				INFOPLIST_FILE = LKTranslatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyluka.LKTranslatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LKTranslator;
+			};
+			name = Debug;
+		};
+		A1A648491FE7C0BE00473FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4Y23644F4;
+				INFOPLIST_FILE = LKTranslatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyluka.LKTranslatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LKTranslator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1A648121FE7C0BE00473FFC /* Build configuration list for PBXProject "LKTranslator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A6483F1FE7C0BE00473FFC /* Debug */,
+				A1A648401FE7C0BE00473FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A648411FE7C0BE00473FFC /* Build configuration list for PBXNativeTarget "LKTranslator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A648421FE7C0BE00473FFC /* Debug */,
+				A1A648431FE7C0BE00473FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A648441FE7C0BE00473FFC /* Build configuration list for PBXNativeTarget "LKTranslatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A648451FE7C0BE00473FFC /* Debug */,
+				A1A648461FE7C0BE00473FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A648471FE7C0BE00473FFC /* Build configuration list for PBXNativeTarget "LKTranslatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A648481FE7C0BE00473FFC /* Debug */,
+				A1A648491FE7C0BE00473FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1A6480F1FE7C0BE00473FFC /* Project object */;
+}

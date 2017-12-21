@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LKPopoverViewController">
+            <connections>
+                <outlet property="label" destination="1lc-QN-0nP" id="uls-wE-Jjv"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="43"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1lc-QN-0nP">
+                    <rect key="frame" x="10" y="12" width="254" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="e4P-0g-my2"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="哈哈" id="pis-Xi-z83">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="1lc-QN-0nP" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="3S2-9l-L4Q"/>
+                <constraint firstItem="1lc-QN-0nP" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="67s-ra-MA4"/>
+                <constraint firstAttribute="trailing" secondItem="1lc-QN-0nP" secondAttribute="trailing" constant="12" id="c5P-Da-Svm"/>
+                <constraint firstAttribute="bottom" secondItem="1lc-QN-0nP" secondAttribute="bottom" constant="12" id="i11-s5-WZj"/>
+            </constraints>
+            <point key="canvasLocation" x="-50.5" y="158.5"/>
+        </customView>
+    </objects>
+</document>
