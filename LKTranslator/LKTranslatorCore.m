@@ -90,6 +90,8 @@
     [params setObject:@"zh-CN" forKey:@"tl"];
     [params setObject:@"gtx" forKey:@"client"];
     [params setObject:@"t" forKey:@"dt"];
+    [params setObject:@"UTF-8" forKey:@"ie"];
+    [params setObject:@"UTF-8" forKey:@"oe"];
     
     NSMutableArray *items = [NSMutableArray array];
     for (NSString *key in params.allKeys) {
