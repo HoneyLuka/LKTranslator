@@ -11,8 +11,6 @@
 #import "LKHotKeyObserver.h"
 #import "LKUIHandler.h"
 
-static NSString *key = @""; // google translate api key.
-
 @interface LKTranslatorCore () <LKHotKeyObserverDelegate>
 
 @property (nonatomic, strong) LKHotKeyObserver *hotKeyObserver;
@@ -79,19 +77,19 @@ static NSString *key = @""; // google translate api key.
 - (void)translateText:(NSString *)text
 {
     text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if (text.length > 100 || !text.length) {
+    if (text.length > 1024 || !text.length) {
         return;
     }
     
-    NSString *urlString = @"https://translation.googleapis.com/language/translate/v2";
+    NSString *urlString = @"https://translate.google.cn/translate_a/single";
     NSURLComponents *components = [NSURLComponents componentsWithString:urlString];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:text forKey:@"q"];
-    [params setObject:@"zh-CN" forKey:@"target"];
-    [params setObject:@"text" forKey:@"format"];
-    [params setObject:@"en" forKey:@"source"];
-    [params setObject:key forKey:@"key"];
+    [params setObject:@"en" forKey:@"sl"];
+    [params setObject:@"zh-CN" forKey:@"tl"];
+    [params setObject:@"gtx" forKey:@"client"];
+    [params setObject:@"t" forKey:@"dt"];
     
     NSMutableArray *items = [NSMutableArray array];
     for (NSString *key in params.allKeys) {
@@ -121,18 +119,30 @@ static NSString *key = @""; // google translate api key.
              return;
          }
          
-         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-         if (!jsonDict) {
-             // error
-             self.uiHandler.status = LKUIHandlerStatusError;
-             return;
-         }
+         NSString *resultText = nil;
          
-         NSArray *array = jsonDict[@"data"][@"translations"];
-         NSDictionary *textDict = array.lastObject;
-         NSString *resultText = textDict[@"translatedText"];
-         if (!resultText.length) {
-             // error
+         @try {
+             NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data
+                                                                  options:NSJSONReadingMutableLeaves
+                                                                    error:nil];
+             NSArray *resultArray = [jsonArray firstObject];
+             
+             NSMutableString *str = [[NSMutableString alloc]initWithString:@""];
+             for (NSArray *array in resultArray) {
+                 NSString *translatedText = array.firstObject;
+                 if (translatedText.length) {
+                     [str appendString:translatedText];
+                 }
+             }
+             
+             resultText = str;
+             
+             if (!resultText.length) {
+                 // error
+                 self.uiHandler.status = LKUIHandlerStatusError;
+                 return;
+             }
+         } @catch (NSException *exception) {
              self.uiHandler.status = LKUIHandlerStatusError;
              return;
          }
