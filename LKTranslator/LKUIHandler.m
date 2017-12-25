@@ -52,7 +52,7 @@
     
     self.popViewController = [[LKPopoverViewController alloc]initWithNibName:NSStringFromClass(LKPopoverViewController.class)
                                                                       bundle:nil];
-//    [self.popViewController view];
+    [self.popViewController view];
     self.popover.contentViewController = self.popViewController;
     
     self.status = LKUIHandlerStatusIdle;
