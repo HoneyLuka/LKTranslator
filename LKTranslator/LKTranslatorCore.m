@@ -11,7 +11,7 @@
 #import "LKHotKeyObserver.h"
 #import "LKUIHandler.h"
 
-@interface LKTranslatorCore () <LKHotKeyObserverDelegate>
+@interface LKTranslatorCore () <LKHotKeyObserverDelegate, LKUIHandlerDelegate>
 
 @property (nonatomic, strong) LKHotKeyObserver *hotKeyObserver;
 @property (nonatomic, strong) LKUIHandler *uiHandler;
@@ -49,6 +49,7 @@
     self.hotKeyObserver.delegate = self;
     
     self.uiHandler = [LKUIHandler new];
+    self.uiHandler.delegate = self;
 }
 
 - (void)applicationWillTerminate
@@ -161,9 +162,21 @@
 
 #pragma mark - LKHotKeyObserverDelegate
 
-- (void)hotKeyObserverDidTriggerHotKey:(LKHotKeyObserver *)observer
+- (void)hotKeyObserverDidTriggerQuickHotKey:(LKHotKeyObserver *)observer
 {
     [self checkPasteBoard];
+}
+
+- (void)hotKeyObserverDidTriggerInputHotKey:(LKHotKeyObserver *)observer
+{
+    [self.uiHandler showTextInputView];
+}
+
+#pragma mark - LKUIHandlerDelegate
+
+- (void)UIHandler:(LKUIHandler *)handler didEnterText:(NSString *)text
+{
+    [self translateText:text];
 }
 
 @end

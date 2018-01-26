@@ -10,8 +10,11 @@
 #import <Carbon/Carbon.h>
 
 static EventHandlerRef handlerRef = NULL;
-static EventHotKeyRef hotKeyRef = NULL;
-static EventHotKeyID translateHotKeyID = {'keyA', 1};
+static EventHotKeyRef quickHotKeyRef = NULL;
+static EventHotKeyRef inputHotKeyRef = NULL;
+
+static EventHotKeyID quickHotKeyID = {'keyA', 1};
+static EventHotKeyID inputHotKeyID = {'keyB', 2};
 
 static LKHotKeyObserver *selfRef = nil;
 
@@ -29,9 +32,15 @@ OSStatus hotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent, v
     
     EventHotKeyID keyID;
     GetEventParameter(inEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(keyID), NULL, &keyID);
-    if (keyID.id == translateHotKeyID.id) {
-        if ([selfRef.delegate respondsToSelector:@selector(hotKeyObserverDidTriggerHotKey:)]) {
-            [selfRef.delegate hotKeyObserverDidTriggerHotKey:selfRef];
+    if (keyID.id == quickHotKeyID.id) {
+        if ([selfRef.delegate respondsToSelector:@selector(hotKeyObserverDidTriggerQuickHotKey:)]) {
+            [selfRef.delegate hotKeyObserverDidTriggerQuickHotKey:selfRef];
+        }
+    }
+    
+    if (keyID.id == inputHotKeyID.id) {
+        if ([selfRef.delegate respondsToSelector:@selector(hotKeyObserverDidTriggerInputHotKey:)]) {
+            [selfRef.delegate hotKeyObserverDidTriggerInputHotKey:selfRef];
         }
     }
     
@@ -69,18 +78,30 @@ OSStatus hotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent, v
                                    &handlerRef);
     
     RegisterEventHotKey(kVK_ANSI_D,
-                        cmdKey,
-                        translateHotKeyID,
+                        cmdKey | controlKey,
+                        inputHotKeyID,
                         GetApplicationEventTarget(),
                         0,
-                        &hotKeyRef);
+                        &inputHotKeyRef);
+    
+    RegisterEventHotKey(kVK_ANSI_D,
+                        cmdKey,
+                        quickHotKeyID,
+                        GetApplicationEventTarget(),
+                        0,
+                        &quickHotKeyRef);
 }
 
 - (void)unRegisterHotKey
 {
-    if (hotKeyRef) {
-        UnregisterEventHotKey(hotKeyRef);
-        hotKeyRef = NULL;
+    if (quickHotKeyRef) {
+        UnregisterEventHotKey(quickHotKeyRef);
+        quickHotKeyRef = NULL;
+    }
+    
+    if (inputHotKeyRef) {
+        UnregisterEventHotKey(inputHotKeyRef);
+        inputHotKeyRef = NULL;
     }
     
     if (handlerRef) {

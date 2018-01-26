@@ -11,7 +11,9 @@
 @class LKHotKeyObserver;
 @protocol LKHotKeyObserverDelegate <NSObject>
 
-- (void)hotKeyObserverDidTriggerHotKey:(LKHotKeyObserver *)observer;
+@optional
+- (void)hotKeyObserverDidTriggerQuickHotKey:(LKHotKeyObserver *)observer;
+- (void)hotKeyObserverDidTriggerInputHotKey:(LKHotKeyObserver *)observer;
 
 @end
 

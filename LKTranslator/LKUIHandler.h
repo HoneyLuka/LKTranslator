@@ -14,10 +14,21 @@ typedef NS_ENUM(NSUInteger, LKUIHandlerStatus) {
     LKUIHandlerStatusError,
 };
 
+@class LKUIHandler;
+@protocol LKUIHandlerDelegate <NSObject>
+
+@optional
+- (void)UIHandler:(LKUIHandler *)handler didEnterText:(NSString *)text;
+
+@end
+
 @interface LKUIHandler : NSObject
 
 @property (nonatomic, assign) LKUIHandlerStatus status;
 
+@property (nonatomic, weak) id<LKUIHandlerDelegate> delegate;
+
 - (void)showTranslateText:(NSString *)text;
+- (void)showTextInputView;
 
 @end

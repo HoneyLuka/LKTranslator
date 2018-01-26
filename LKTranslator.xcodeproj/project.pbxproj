@@ -10,6 +10,9 @@
 		A10328A61FEA7FDE0010D349 /* LKTranslatorCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A10328A51FEA7FDE0010D349 /* LKTranslatorCore.m */; };
 		A10328A91FEA80780010D349 /* LKHotKeyObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A10328A81FEA80780010D349 /* LKHotKeyObserver.m */; };
 		A10328C71FEBB53C0010D349 /* LKUIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A10328C61FEBB53C0010D349 /* LKUIHandler.m */; };
+		A18B0A062019E01800712359 /* LKTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A18B0A042019E01800712359 /* LKTextInputViewController.m */; };
+		A18B0A072019E01800712359 /* LKTextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18B0A052019E01800712359 /* LKTextInputViewController.xib */; };
+		A18B0A0D201ACF5500712359 /* LKCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A18B0A0C201ACF5500712359 /* LKCustomTextField.m */; };
 		A1A6481C1FE7C0BE00473FFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A6481B1FE7C0BE00473FFC /* AppDelegate.m */; };
 		A1A648211FE7C0BE00473FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A648201FE7C0BE00473FFC /* Assets.xcassets */; };
 		A1A648271FE7C0BE00473FFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A648261FE7C0BE00473FFC /* main.m */; };
@@ -45,6 +48,11 @@
 		A10328A81FEA80780010D349 /* LKHotKeyObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKHotKeyObserver.m; sourceTree = "<group>"; };
 		A10328C51FEBB53C0010D349 /* LKUIHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKUIHandler.h; sourceTree = "<group>"; };
 		A10328C61FEBB53C0010D349 /* LKUIHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKUIHandler.m; sourceTree = "<group>"; };
+		A18B0A032019E01800712359 /* LKTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTextInputViewController.h; sourceTree = "<group>"; };
+		A18B0A042019E01800712359 /* LKTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKTextInputViewController.m; sourceTree = "<group>"; };
+		A18B0A052019E01800712359 /* LKTextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LKTextInputViewController.xib; sourceTree = "<group>"; };
+		A18B0A0B201ACF5500712359 /* LKCustomTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCustomTextField.h; sourceTree = "<group>"; };
+		A18B0A0C201ACF5500712359 /* LKCustomTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKCustomTextField.m; sourceTree = "<group>"; };
 		A1A648171FE7C0BE00473FFC /* LKTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A6481A1FE7C0BE00473FFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1A6481B1FE7C0BE00473FFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +99,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A18B0A0E201AD6F200712359 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1BBCEBC1FE8D02C00434E2F /* LKPopoverViewController.h */,
+				A1BBCEBD1FE8D02C00434E2F /* LKPopoverViewController.m */,
+				A1BBCEBE1FE8D02C00434E2F /* LKPopoverViewController.xib */,
+				A18B0A032019E01800712359 /* LKTextInputViewController.h */,
+				A18B0A042019E01800712359 /* LKTextInputViewController.m */,
+				A18B0A052019E01800712359 /* LKTextInputViewController.xib */,
+				A18B0A0B201ACF5500712359 /* LKCustomTextField.h */,
+				A18B0A0C201ACF5500712359 /* LKCustomTextField.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A1A6480E1FE7C0BE00473FFC = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +138,10 @@
 		A1A648191FE7C0BE00473FFC /* LKTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				A18B0A0E201AD6F200712359 /* Views */,
 				A1A6481A1FE7C0BE00473FFC /* AppDelegate.h */,
 				A1A6481B1FE7C0BE00473FFC /* AppDelegate.m */,
 				A1BBCEB71FE7C5AF00434E2F /* MainMenu.xib */,
-				A1BBCEBC1FE8D02C00434E2F /* LKPopoverViewController.h */,
-				A1BBCEBD1FE8D02C00434E2F /* LKPopoverViewController.m */,
-				A1BBCEBE1FE8D02C00434E2F /* LKPopoverViewController.xib */,
 				A10328A41FEA7FDE0010D349 /* LKTranslatorCore.h */,
 				A10328A51FEA7FDE0010D349 /* LKTranslatorCore.m */,
 				A10328A71FEA80780010D349 /* LKHotKeyObserver.h */,
@@ -268,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A648211FE7C0BE00473FFC /* Assets.xcassets in Resources */,
+				A18B0A072019E01800712359 /* LKTextInputViewController.xib in Resources */,
 				A1BBCEB81FE7C5AF00434E2F /* MainMenu.xib in Resources */,
 				A1BBCEC01FE8D02C00434E2F /* LKPopoverViewController.xib in Resources */,
 			);
@@ -295,11 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BBCEBF1FE8D02C00434E2F /* LKPopoverViewController.m in Sources */,
+				A18B0A0D201ACF5500712359 /* LKCustomTextField.m in Sources */,
 				A10328A91FEA80780010D349 /* LKHotKeyObserver.m in Sources */,
 				A1A648271FE7C0BE00473FFC /* main.m in Sources */,
 				A10328C71FEBB53C0010D349 /* LKUIHandler.m in Sources */,
 				A1A6481C1FE7C0BE00473FFC /* AppDelegate.m in Sources */,
 				A10328A61FEA7FDE0010D349 /* LKTranslatorCore.m in Sources */,
+				A18B0A062019E01800712359 /* LKTextInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +486,7 @@
 				CODE_SIGN_ENTITLEMENTS = LKTranslator/LKTranslator.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = TJHSEWAH8F;
+				DEVELOPMENT_TEAM = H7DMGLX7HR;
 				INFOPLIST_FILE = LKTranslator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;

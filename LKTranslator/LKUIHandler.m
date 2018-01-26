@@ -8,6 +8,7 @@
 
 #import "LKUIHandler.h"
 #import "LKPopoverViewController.h"
+#import "LKTextInputViewController.h"
 
 @interface LKUIHandler () <NSPopoverDelegate>
 
@@ -16,6 +17,8 @@
 
 @property (nonatomic, strong) LKPopoverViewController *popViewController;
 @property (nonatomic, strong) NSPopover *popover;
+
+@property (nonatomic, strong) LKTextInputViewController *inputViewController;
 
 @end
 
@@ -35,6 +38,7 @@
     self.statusItem = [[NSStatusBar systemStatusBar]statusItemWithLength:25];
     self.statusItem.button.target = self;
     self.statusItem.button.action = @selector(onStatusItemClick:);
+    [self.statusItem.button sendActionOn:NSEventMaskLeftMouseUp | NSEventMaskRightMouseUp];
     
     NSProgressIndicator *indicator = [[NSProgressIndicator alloc]init];
     indicator.style = NSProgressIndicatorStyleSpinning;
@@ -54,6 +58,16 @@
                                                                       bundle:nil];
     [self.popViewController view];
     self.popover.contentViewController = self.popViewController;
+    
+    self.inputViewController = [[LKTextInputViewController alloc]init];
+    
+    __weak typeof(self) weakSelf = self;
+    self.inputViewController.callback = ^(NSString *text) {
+        if ([weakSelf.delegate respondsToSelector:@selector(UIHandler:didEnterText:)]) {
+            [weakSelf.delegate UIHandler:weakSelf didEnterText:text];
+        }
+    };
+    [self.inputViewController view];
     
     self.status = LKUIHandlerStatusIdle;
 }
@@ -101,6 +115,8 @@
     NSSize size = [self.popViewController.label fittingSize];
     size.width += kLKPopoverViewControllerContentPadding * 2;
     size.height += kLKPopoverViewControllerContentPadding * 2;
+    
+    self.popover.contentViewController = self.popViewController;
     self.popover.contentSize = size;
     
     [self.popover showRelativeToRect:self.statusItem.button.bounds
@@ -110,9 +126,20 @@
     [[NSApplication sharedApplication]activateIgnoringOtherApps:YES];
 }
 
+- (void)showTextInputView
+{
+    self.popover.contentViewController = self.inputViewController;
+    NSSize size = NSMakeSize(250, 48);
+    self.popover.contentSize = size;
+    [self.popover showRelativeToRect:self.statusItem.button.bounds
+                              ofView:self.statusItem.button
+                       preferredEdge:NSRectEdgeMaxY];
+    [[NSApplication sharedApplication]activateIgnoringOtherApps:YES];
+}
+
 #pragma mark - Action
 
-- (void)onStatusItemClick:(NSStatusBarButton *)sender
+- (void)onStatusItemRightClick
 {
     NSString *name = [NSBundle mainBundle].infoDictionary[@"CFBundleExecutable"];
     NSMenu *menu = [[NSMenu alloc]initWithTitle:name];
@@ -121,7 +148,23 @@
                                     keyEquivalent:@""];
     quitItem.target = self;
     
-    [menu popUpMenuPositioningItem:nil atLocation:NSMakePoint(0, -5) inView:sender.window.contentView];
+    self.statusItem.menu = menu;
+    [self.statusItem popUpStatusItemMenu:menu];
+    self.statusItem.menu = nil;
+}
+
+- (void)onStatusItemLeftClick
+{
+    [self showTextInputView];
+}
+
+- (void)onStatusItemClick:(NSStatusBarButton *)sender
+{
+    if (NSApp.currentEvent.type == NSEventTypeLeftMouseUp) {
+        [self onStatusItemLeftClick];
+    } else if (NSApp.currentEvent.type == NSEventTypeRightMouseUp) {
+        [self onStatusItemRightClick];
+    }
 }
 
 - (void)onQuitMenuButtonClick
